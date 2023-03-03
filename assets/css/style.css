@@ -7,18 +7,35 @@
     box-sizing: border-box;
 }
 
-
+:root{
+    --text-primary: #fff;
+    --text-secondary: #000;
+    --font-heading: 'poppins';
+    --font-default: 'montserrat';
+}
 
 html{
     font-size: 62.5%;
 }
 
+body{
+    font-family: var(--font-default);
+    color: var(--text-primary);
+
+}
+
+
 header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
     background-image: url("../images/hero.jpg");
     background-size: cover;
     height: 100vh;
     padding-top: 9rem;
     padding-left: 13rem;
+
 
 }
 
@@ -26,13 +43,38 @@ header{
 h1{
     font-size: 4rem;
     font-weight: 900;
-    color:#FFF;
-    font-family: "poppins";
+    font-family: var(--font-heading);
 
 }
 
 span{
-    font-size: 3.6rem;
-    color:#FFF;
-    font-family: "montserrat";
+    font-size: 3.6rem; 
+}
+
+.button{
+
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+    padding: 1rem 3rem;
+    border-radius:7px;
+    color: #FFF;
+    font-size: 2rem;
+    font-family: var(--font-default);
+    text-decoration: none;
+}
+
+img.avatar{
+    border-radius: 50%;
+
+}
+
+.section-presentation{
+    display: flex;
+    color: var(--text-secondary);   
+}
+
+.section-presentation div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 }
