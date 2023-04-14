@@ -25,7 +25,35 @@ body{
 
 }
 
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+}
 
+.spin{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 15px solid #646464;
+    border-top: 16px solid #6A3093;
+    animation: spin 2s infinite;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 #hamburguer{
     display: flex;
@@ -91,6 +119,10 @@ header{
     overflow: hidden;
     position: relative;
 
+}
+
+header h1{
+    font-size: clamp(2rem, 5vw, 5rem);
 }
 
 header::before{
@@ -250,4 +282,14 @@ img.avatar{
 
 #section-budget form output{
     grid-column: 2;
+}
+
+@media (max-width: 900px){
+    #section-projects ul{
+        flex-direction: column;
+    }
+    .large-only{
+        display: none;
+    }
+
 }
